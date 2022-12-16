@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainViewFragment">
+
+    <fragment
+        android:id="@+id/mainViewFragment"
+        android:name="com.example.fragments.MainViewFragment"
+        android:label="MainViewFragment" >
+        <action
+            android:id="@+id/action_mainViewFragment_to_coverView"
+            app:destination="@id/coverView" />
+        <action
+            android:id="@+id/action_mainViewFragment_to_descriptionView"
+            app:destination="@id/descriptionView" />
+    </fragment>
+    <fragment
+        android:id="@+id/coverView"
+        android:name="com.example.fragments.CoverView"
+        android:label="CoverView" >
+        <action
+            android:id="@+id/action_coverView_to_descriptionView"
+            app:destination="@id/descriptionView" />
+    </fragment>
+    <fragment
+        android:id="@+id/descriptionView"
+        android:name="com.example.fragments.DescriptionView"
+        android:label="DescriptionView" >
+        <action
+            android:id="@+id/action_descriptionView_to_coverView"
+            app:destination="@id/coverView" />
+    </fragment>
+</navigation>
